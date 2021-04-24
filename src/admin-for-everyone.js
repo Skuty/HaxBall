@@ -5,7 +5,7 @@
 
  let room = HBInit();
  room.pluginSpec = {
-   name: `hr/admin-for-everyone`,
+   name: `admin-for-everyone`,
    author: `skuty`,
    version: `1.0.0`,
  };
