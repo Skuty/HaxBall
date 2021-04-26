@@ -64,15 +64,15 @@ function getRedTeamMembersAsString() {
  }
 
  function onGameStart(byPlayer) {
-    sendAnnouncement('KrukMatch started - Good Luck and Have Fun Krukers!', null, null, null, null);
-    sendAnnouncement('RED team: ' + getRedTeamMembersAsString(), null, null, null, null)
-    sendAnnouncement('BLUE team: ' + getBlueTeamMembersAsString(), null, null, null, null)
-    sendAnnouncement('Fans in the stands:: ' + getSpectatorsAsString(), null, null, null, null)
+    room.sendAnnouncement('KrukMatch started - Good Luck and Have Fun Krukers!', null, null, null, null);
+    room.sendAnnouncement('RED team: ' + getRedTeamMembersAsString(), null, null, null, null)
+    room.sendAnnouncement('BLUE team: ' + getBlueTeamMembersAsString(), null, null, null, null)
+    room.sendAnnouncement('Fans in the stands:: ' + getSpectatorsAsString(), null, null, null, null)
  }
 
  function onTeamGoal(team) {
     var teamName = '';
-    
+
     if (team == 1) {
         teamName = 'RED';
     };
@@ -81,16 +81,16 @@ function getRedTeamMembersAsString() {
         teamName = 'BLUE';
     }
   
-    sendAnnouncement(teamName + ' has scored!', null, null, null, null);
+    room.sendAnnouncement(teamName + ' has scored!', null, null, null, null);
  }
 
  function onTeamVictory(scores) {
-    sendAnnouncement('KrukMatch ended - Good Game Krukers!', null, null, null, null);
-    sendAnnouncement(getWinnersTeamAsString(scores) + ' won after ' + scores.time + ' tough seconds !', null, null, null, null);
-    sendAnnouncement('RED ' + scores.red + ' : ' + scores.blue + ' BLUE', null, null, null, null);
-    sendAnnouncement('RED team: ' + getRedTeamMembersAsString(), null, null, null, null)
-    sendAnnouncement('RED team: ' + getBlueTeamMembersAsString(), null, null, null, null)
-    sendAnnouncement('See you on the next KrukMatch!', null, null, null, null);
+    room.sendAnnouncement('KrukMatch ended - Good Game Krukers!', null, null, null, null);
+    room.sendAnnouncement(getWinnersTeamAsString(scores) + ' won after ' + scores.time + ' tough seconds !', null, null, null, null);
+    room.sendAnnouncement('RED ' + scores.red + ' : ' + scores.blue + ' BLUE', null, null, null, null);
+    room.sendAnnouncement('RED team: ' + getRedTeamMembersAsString(), null, null, null, null)
+    room.sendAnnouncement('RED team: ' + getBlueTeamMembersAsString(), null, null, null, null)
+    room.sendAnnouncement('See you on the next KrukMatch!', null, null, null, null);
  }
 
  room.onRoomLink = function onRoomLink() {
