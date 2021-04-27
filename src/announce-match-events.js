@@ -18,8 +18,7 @@
 function getSpectatorsAsString() {
     var result = '';
 
-    var players = room.getPlayerList()
-        .find((player) => player.team == 0);
+    var players = room.getPlayerList().find((player) => player.team == 0);
 
     for (i = 0; i < players.length; i++) {
         result = result + ', ' + players[i].Name;
@@ -31,8 +30,7 @@ function getSpectatorsAsString() {
 function getRedTeamMembersAsString() {
     var result = '';
 
-    var players = room.getPlayerList()
-        .find((player) => player.team == 1);
+    var players = room.getPlayerList().find((player) => player.team == 1);
 
     for (i = 0; i < players.length; i++) {
         result = result + ', ' + players[i].Name;
@@ -44,8 +42,7 @@ function getRedTeamMembersAsString() {
  function getBlueTeamMembersAsString() {
     var result = '';
 
-    var players = room.getPlayerList()
-        .find((player) => player.team == 2);
+    var players = room.getPlayerList().find((player) => player.team == 2);
 
     for (i = 0; i < players.length; i++) {
         result = result + ', ' + players[i].Name;
