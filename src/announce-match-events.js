@@ -10,7 +10,7 @@
 
  let room = HBInit();
  room.pluginSpec = {
-   name: `announce-match-events`,
+   name: `announce-match-events-1.0.3`,
    author: `skuty`,
    version: `1.0.3`,
  };
