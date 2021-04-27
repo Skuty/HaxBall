@@ -10,9 +10,9 @@
 
  let room = HBInit();
  room.pluginSpec = {
-   name: `announce-match-events-1.0.3`,
+   name: `announce-match-events`,
    author: `skuty`,
-   version: `1.0.3`,
+   version: `1.0.4`,
  };
 
 function getSpectatorsAsString() {
