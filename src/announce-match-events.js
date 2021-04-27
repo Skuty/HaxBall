@@ -77,6 +77,7 @@ function getRedTeamMembersAsString() {
 
  function onGameStart(byPlayer) {
     room.sendChat('KrukMatch started - Good Luck and Have Fun Krukers! - 1.0.5');
+    room.sendChat('KrukMatch started - Good Luck and Have Fun Krukers! - 1.0.5', 0);
     console.info('KrukMatch started - Log 2 console');
     room.sendChat('RED team: ' + getRedTeamMembersAsString(), null);
     room.sendChat('BLUE team: ' + getBlueTeamMembersAsString(), null);
