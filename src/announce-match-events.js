@@ -12,7 +12,7 @@
  room.pluginSpec = {
    name: `announce-match-events`,
    author: `skuty`,
-   version: `1.0.2`,
+   version: `1.0.3`,
  };
 
 function getSpectatorsAsString() {
@@ -76,7 +76,8 @@ function getRedTeamMembersAsString() {
  }
 
  function onGameStart(byPlayer) {
-    room.sendChat('KrukMatch started - Good Luck and Have Fun Krukers!', null);
+    room.sendChat('KrukMatch started - Good Luck and Have Fun Krukers!');
+    console.log('KrukMatch started - Good Luck and Have Fun Krukers!');
     room.sendChat('RED team: ' + getRedTeamMembersAsString(), null);
     room.sendChat('BLUE team: ' + getBlueTeamMembersAsString(), null);
     room.sendChat('Fans in the stands:: ' + getSpectatorsAsString(), null);
