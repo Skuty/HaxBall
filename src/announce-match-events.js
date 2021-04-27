@@ -18,9 +18,12 @@
 function getSpectatorsAsString() {
     var result = '';
 
-    room.getPlayerList()
-        .find((player) => player.team == 0)
-        .forEach(teamMember => { result = result + ', ' + teamMember.Name } );
+    var players = room.getPlayerList()
+        .find((player) => player.team == 0);
+
+    for (i = 0; i < players.length; i++) {
+        result = result + ', ' + players[i].Name;
+    }
 
      return result;
 }
@@ -28,9 +31,12 @@ function getSpectatorsAsString() {
 function getRedTeamMembersAsString() {
     var result = '';
 
-    room.getPlayerList()
-        .find((player) => player.team == 1)
-        .forEach(teamMember => { result = result + ', ' + teamMember.Name } );
+    var players = room.getPlayerList()
+        .find((player) => player.team == 1);
+
+    for (i = 0; i < players.length; i++) {
+        result = result + ', ' + players[i].Name;
+    }
 
      return result;
  }
@@ -38,10 +44,13 @@ function getRedTeamMembersAsString() {
  function getBlueTeamMembersAsString() {
     var result = '';
 
-    room.getPlayerList()
-        .find((player) => player.team == 2)
-        .forEach(teamMember => { result = result + ', ' + teamMember.Name } );
+    var players = room.getPlayerList()
+        .find((player) => player.team == 2);
 
+    for (i = 0; i < players.length; i++) {
+        result = result + ', ' + players[i].Name;
+    }
+        
      return result;
  } 
 
