@@ -12,13 +12,15 @@
  room.pluginSpec = {
    name: `announce-match-events`,
    author: `skuty`,
-   version: `1.0.1`,
+   version: `1.0.2`,
  };
 
 function getSpectatorsAsString() {
     var result = '';
 
     var players = room.getPlayerList().find((player) => player.team == 0);
+
+    if (players == null) return;
 
     for (i = 0; i < players.length; i++) {
         result = result + ', ' + players[i].Name;
@@ -32,6 +34,8 @@ function getRedTeamMembersAsString() {
 
     var players = room.getPlayerList().find((player) => player.team == 1);
 
+    if (players == null) return;
+
     for (i = 0; i < players.length; i++) {
         result = result + ', ' + players[i].Name;
     }
@@ -43,6 +47,8 @@ function getRedTeamMembersAsString() {
     var result = '';
 
     var players = room.getPlayerList().find((player) => player.team == 2);
+
+    if (players == null) return;
 
     for (i = 0; i < players.length; i++) {
         result = result + ', ' + players[i].Name;
