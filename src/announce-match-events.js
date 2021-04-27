@@ -12,7 +12,7 @@
  room.pluginSpec = {
    name: `announce-match-events`,
    author: `skuty`,
-   version: `1.0.5`,
+   version: `1.0.6`,
  };
 
 function getSpectatorsAsString() {
