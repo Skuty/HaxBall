@@ -73,10 +73,10 @@ function getRedTeamMembersAsString() {
  }
 
  function onGameStart(byPlayer) {
-    room.sendAnnouncement('KrukMatch started - Good Luck and Have Fun Krukers!', null, 0x00FF00);
-    room.sendAnnouncement('RED team: ' + getRedTeamMembersAsString(), null, 0x00FF00);
-    room.sendAnnouncement('BLUE team: ' + getBlueTeamMembersAsString(), null, 0x00FF00);
-    room.sendAnnouncement('Fans in the stands:: ' + getSpectatorsAsString(), null, 0x00FF00);
+    room.sendChat('KrukMatch started - Good Luck and Have Fun Krukers!', null);
+    room.sendChat('RED team: ' + getRedTeamMembersAsString(), null);
+    room.sendChat('BLUE team: ' + getBlueTeamMembersAsString(), null);
+    room.sendChat('Fans in the stands:: ' + getSpectatorsAsString(), null);
  }
 
  function onTeamGoal(team) {
@@ -90,16 +90,16 @@ function getRedTeamMembersAsString() {
         teamName = 'BLUE';
     }
   
-    room.sendAnnouncement(teamName + ' has scored!', null, 0x00FF00);
+    room.sendChat('Goal for ' + teamName + '!!!', null);
  }
 
  function onTeamVictory(scores) {
-    room.sendAnnouncement('KrukMatch ended - Good Game Krukers!', null, 0x00FF00);
-    room.sendAnnouncement(getWinnersTeamAsString(scores) + ' won after ' + scores.time + ' tough seconds !', null, 0x00FF00);
-    room.sendAnnouncement('RED ' + scores.red + ' : ' + scores.blue + ' BLUE', null, 0x00FF00);
-    room.sendAnnouncement('RED team: ' + getRedTeamMembersAsString(), null, 0x00FF00);
-    room.sendAnnouncement('RED team: ' + getBlueTeamMembersAsString(), null, 0x00FF00);
-    room.sendAnnouncement('See you on the next KrukMatch!', null, 0x00FF00);
+    room.sendChat('KrukMatch ended - Good Game Krukers!', null);
+    room.sendChat(getWinnersTeamAsString(scores) + ' won after ' + scores.time + ' tough seconds !', null);
+    room.sendChat('RED ' + scores.red + ' : ' + scores.blue + ' BLUE', null);
+    room.sendChat('RED team: ' + getRedTeamMembersAsString(), null);
+    room.sendChat('RED team: ' + getBlueTeamMembersAsString(), null);
+    room.sendChat('See you on the next KrukMatch!', null);
  }
 
  room.onRoomLink = function onRoomLink() {
