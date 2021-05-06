@@ -12,7 +12,7 @@
  room.pluginSpec = {
    name: `announce-match-events`,
    author: `skuty`,
-   version: `1.0.6`,
+   version: `1.0.7`,
  };
 
 function getSpectatorsAsString() {
@@ -99,6 +99,7 @@ function getRedTeamMembersAsString() {
  }
 
  function onTeamVictory(scores) {
+     room.log('Logging Team Victory');
     room.sendChat('KrukMatch ended - Good Game Krukers!', null);
     room.sendChat(getWinnersTeamAsString(scores) + ' won after ' + scores.time + ' tough seconds !', null);
     room.sendChat('RED ' + scores.red + ' : ' + scores.blue + ' BLUE', null);
